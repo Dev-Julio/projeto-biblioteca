@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SISTEMA | BIBLIOTECA</title>
+  <link rel="stylesheet" href="./CSS/CSSGERAL.css">
+</head>
+<body>
+  <div id="div-geral"> <!--div-geral-->
+    <div id="pagina-login"> <!--div-login-->
+      <form action="" id="formulario-login"> <!--formulário-login-->
+        <h1>Sistema biblioteca pública</h1>
+        <h2>Login</h2>
+
+        <div id="campo-de-inputs-login"> <!--div-campo-de-inputs-login-->
+          <label for="CPF">Digite seu CPF</label>
+          <input type="text" name="CPF-login" id="CPF-login" required autocomplete="off" maxlength="14">
+
+          <div id="bloco-senha-login"> <!--div-bloco-senha-login-->
+            <label for="senha">Digite sua senha</label>
+            <input type="password" name="senha-login" id="senha-login">
+
+            <button type="button" onclick="revelarSenha()" id="btn-ver-senha-login">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </button>
+
+          </div> <!--div-bloco-senha-login-->
+          <p id="alerta-campos-incompletos-login"></p>
+          <input type="button" value="Entrar" id="efetuar-login"/>
+          <br><a id="ir-para-pagina-de-cadastro">Não possui cadastro? Acesse aqui!</a>
+        </div> <!--div-campo-de-inputs-login-->
+      </form> <!--formulário-login-->
+    </div> <!--div-login-->    
+
+    <!--Divisão entre login e cadastro-->
+
+    <div id="pagina-cadastro-usuario"> <!--div-cadastro-usuarios-->
+      <form action="" id="formulario-cadastro"> <!--formulário-cadastro-->
+        <a id="voltar-pagina-login">Voltar</a>
+          <h1>Sistema biblioteca pública</h1>
+          <h2>Cadastro</h2>
+
+          <div id="campo-de-inputs-cadastro"> <!--div-campo-inputs-cadastro-->
+            <label for="nome">Digite seu nome</label>
+            <input type="text" name="nome-cadastro" id="nome-cadastro" required autocomplete="off"/>
+
+            <label for="CPF">Digite seu CPF</label>
+            <input type="text" name="CPF-cadastro" id="CPF-cadastro" required autocomplete="off" maxlength="14"/>
+
+            <label for="email">Digite seu email</label>
+            <input type="text" name="email-cadastro" id="email-cadastro" required autocomplete="off"/>
+
+            <label for="telefone">Digite seu telefone</label>
+            <input type="text" name="telefone-cadastro" id="telefone-cadastro" required autocomplete="off"/>
+
+            <label for="endereco">Digite seu endereço</label>
+            <input type="text" name="endereco-cadastro" id="endereco-cadastro" required autocomplete="off"/>
+
+            <div id="bloco-senha-cadastro"> <!--div-bloco-senha-cadastro-->
+              <label for="matricula">Digite sua senha</label>
+              <input type="password" name="senha-cadastro" id="senha-cadastro" required autocomplete="off"/>
+                
+              <button type="button" onclick="revelarSenha()" id="btn-ver-senha-cadastro">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button> <!--div-bloco-senha-cadastro-->
+              <br><p id="alerta-campos-incompletos-cadastro"></p>
+              <br/><input type="button" value="Cadastrar" id="btn-cadastrar-usuario"/>
+            </div>
+          </div> <!--div-campo-inputs-cadastro-->
+        </div> <!--div-página-cadastro-usuarios-->
+      </form> <!--formulário-cadastro-->
+  </div> <!--div-geral-->
+
+<script src="./JS/webSimplificado.js"></script>
+</body>
+</html>

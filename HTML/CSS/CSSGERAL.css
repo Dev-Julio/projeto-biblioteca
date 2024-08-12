@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#pagina-cadastro-usuario {
+  display: none;
+}
+
+#div-geral {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 24px;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+
+input[type="button"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #6c757d; /* Cinza */
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="button"]:hover {
+  background-color: #5a6268; /* Cinza escuro */
+}
+
+a {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#campo-de-inputs-login,
+#campo-de-inputs-cadastro {
+  text-align: center;
+}
+
+#campo-de-inputs-login input[type="button"],
+#campo-de-inputs-cadastro input[type="button"] {
+  width: auto;
+  padding: 10px 20px;
+  margin: 10px auto;
+  display: block;
+  background-color: #6c757d; /* Cinza */
+}
+
+#campo-de-inputs-login input[type="button"]:hover,
+#campo-de-inputs-cadastro input[type="button"]:hover {
+  background-color: #5a6268; /* Cinza escuro */
+}
+
+#bloco-senha-login,
+#bloco-senha-cadastro {
+  position: relative;
+  width: 100%;
+}
+
+#bloco-senha-login input[type="password"],
+#bloco-senha-cadastro input[type="password"] {
+  width: 100%;
+  padding-right: 40px;
+}
+
+#btn-ver-senha-login,
+#btn-ver-senha-cadastro {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: black;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0.5; /* Transparência inicial */
+  transition: opacity 0.3s; /* Transição suave para a opacidade */
+}
+
+#btn-ver-senha-login:hover,
+#btn-ver-senha-cadastro:hover {
+  opacity: 1; /* Totalmente visível ao passar o mouse */
+}
+
+.hidden-btn {
+  opacity: 0; /* Torna o botão invisível */
+  pointer-events: none; /* Evita que o botão seja clicado enquanto invisível */
+}
+
+#voltar-pagina-login {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  background-color: #6c757d; /* Cinza */
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#voltar-pagina-login:hover {
+  text-decoration: none;
+  background-color: #5a6268; /* Cinza escuro */
+  transform: scale(1.05);
+}
+
+p {
+  color: red;
+}

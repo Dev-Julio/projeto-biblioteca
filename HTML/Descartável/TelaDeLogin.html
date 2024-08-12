@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN | BIBLIOTECA</title>
+    <link rel="stylesheet" href="./CSS/CSSGERAL.css"  />
+  </head>
+  <body>
+    <div id="div-tela-principal">
+    <!-- Login do usuário -->
+      <form action="" id="form-login">
+        <div id="div-tela-login">
+          <h1>Sistema biblioteca pública</h1>
+          <h2>LOGIN</h2>
+
+          <div id="inputs">
+            <label for="CPF">Digite seu CPF</label>
+            <input type="text" name="CPF-usuario" id="CPF-usuario" required autocomplete="off"/>
+
+            <div id="senha-container">
+              <label for="matricula">Digite sua senha</label>
+              <input type="password" name="senha-usuario" id="senha" required autocomplete="off" />
+                <button type="button" id="enviar-password" onclick="verSenha()">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+            <br><input type="button" value="Entrar" id="entrar-login"/>
+            <br><a id="tela-de-cadastro">Não possui cadastro? Acesse aqui!</a>
+            
+          </div>
+        </div>
+      </form>
+    <!-- Cadastro do usuário -->
+      <form action="" id="form-cadastro-user">
+        <div id="div-cadastro-usuarios">
+          <h1>Sistema biblioteca pública</h1>
+          <h2>CADASTRO USUÁRIO</h2>
+
+          <div id="tela-inputs">
+            <label for="nome">Digite seu nome</label>
+            <input type="text" name="nome-usuario" id="nome-usuario" required autocomplete="off"/>
+
+            <label for="CPF">Digite seu CPF</label>
+            <input type="text" name="CPF-usuario" id="CPF-usuario" required autocomplete="off"/>
+
+            <label for="email">Digite seu email</label>
+            <input type="text" name="email-usuario" id="email-usuario" required autocomplete="off"/>
+
+            <label for="telefone">Digite seu telefone</label>
+            <input type="text" name="telefone-usuario" id="telefone-usuario" required autocomplete="off"/>
+
+            <label for="endereco">Digite seu endereço</label>
+            <input type="text" name="endereco-usuario" id="endereco-usuario" required autocomplete="off"/>
+
+            <div id="senha-container">
+              <label for="matricula">Digite sua senha</label>
+              <input type="password" name="senha-usuario" id="senha" required autocomplete="off" />
+                <button type="button" id="enviar-password" onclick="verSenha()">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+
+            <p id="alert-campos-nao-preenchidos-cadastro"></p>
+
+            <br/><input type="button" value="Cadastrar" id="cadastrarUser"/>
+          </div>
+        </div>
+      </form>
+    <!-- Cadastro do funcionário -->
+      <form action="" id="form-cadastro-funcionario">
+        <div id="div-cadastro-funcionario">
+          <h1>Sistema biblioteca pública</h1>
+          <h2>CADASTRO FUNCIONÁRIO</h2>
+
+          <div id="tela-inputs">
+            <label for="nome">Digite seu nome</label>
+            <input type="text" name="nome-funcionario" id="nome-funcionario" />
+
+            <label for="CPF">Digite seu CPF</label>
+            <input type="text" name="CPF-funcionario" id="CPF-funcionario" />
+
+            <label for="email">Digite seu email</label>
+            <input type="text" name="email-funcionario" id="email-funcionario" />
+
+            <label for="telefone">Digite seu telefone</label>
+            <input type="text" name="telefone-funcionario" id="telefone-funcionario"/>
+
+            <label for="endereco">Digite seu endereco</label>
+            <input type="text" name="endereco-funcionario" id="endereco-funcionario"/>
+
+            <div id="senha-container">
+              <label for="matricula">Digite sua senha</label>
+              <input type="password" name="senha-usuario" id="senha" required autocomplete="off" />
+                <button type="button" id="enviar-password" onclick="verSenha()">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+
+            <p id="alert-campos-nao-preenchidos-login"></p>
+            
+            <br /><input type="button" value="Entrar" />
+          </div>
+        </div>
+      </form>
+
+    </div>
+    <script src="./JS/index.js"></script>
+  </body>
+</html>
