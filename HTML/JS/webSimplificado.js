@@ -68,8 +68,18 @@ function validarCPF(inputCPF) {
 
 // Essa função é responsável por exibir os alertas de erro das validações do CPF
 function exibirAlerta(elemento, mensagem) {
-  elemento.innerHTML = mensagem; 
-  setTimeout(() => alertaElement.innerHTML = '', 2500);
+  elemento.innerHTML = mensagem;
+  setTimeout(() => elemento.innerHTML = '', 2500);
+}
+
+// Essa função é responsável por formatar o CPF 
+function formatarCPF(moldeCPF) {
+  moldeCPF.addEventListener('keypress', () => {
+    let config = moldeCPF.value.length;
+
+    if (config === 3 || config === 7) moldeCPF.value += '.';
+    if (config === 11) moldeCPF.value += '-';
+  });
 }
 
 // Aqui refere-se ao botão voltar, presente na tela de cadastro, ao clicar nele, você retorna à página de login
@@ -86,14 +96,6 @@ mudarParaPaginaCadastro.addEventListener('click', () => {
   paginaCadastro.style.display = 'inline';
   limparInputsCadastro();
   limparInputsLogin();
-});
-
-// Aqui vai ser responsável por adicionar os '.' e os '-' no CPF do login, automaticamente
-presetFormatCPFlogin.addEventListener('keypress', () => {
-  let preset = presetFormatCPFlogin.value.length;
-
-  if (preset === 3 || preset === 7) presetFormatCPFlogin.value += '.';
-  if (preset === 11) presetFormatCPFlogin.value += '-';
 });
 
 // Aqui é realizada a validação do login
@@ -113,14 +115,6 @@ finalizarLoginUsuario.addEventListener('click', () => {
   }
 });
 
-// Aqui vai ser responsável por adicionar os '.' e os '-' no CPF do cadastro, automaticamente
-presetFormatCPFcadastro.addEventListener('keypress', () => {
-  let preset = presetFormatCPFcadastro.value.length;
-
-  if (preset === 3 || preset === 7) presetFormatCPFcadastro.value += '.';
-  if (preset === 11) presetFormatCPFcadastro.value += '-';
-});
-
 // Aqui finaliza o cadastro dos usuários, manda os valores pro banco de dados
 finalizarCadastroUsuario.addEventListener('click', () => {
   if (barrarInputsVazioCadastro()) {
@@ -137,3 +131,5 @@ finalizarCadastroUsuario.addEventListener('click', () => {
     exibirAlerta(alertaInputsVazioCadastro, 'Preencha todos os campos corretamente!');
   }
 });
+formatarCPF(presetFormatCPFlogin);
+formatarCPF(presetFormatCPFcadastro);
