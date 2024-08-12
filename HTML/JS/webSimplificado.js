@@ -44,15 +44,21 @@ function revelarSenha() {
   if (revelarSenhaLogin.type === 'password') revelarSenhaLogin.type = 'text';
   btnRevelaSenhaLogin.style.display = 'none';
 
-  setTimeout(() => revelarSenhaLogin.type = 'password', btnRevelaSenhaLogin.style.display = 'inline', 1500);
+  setTimeout(() => {
+    revelarSenhaLogin.type = 'password';
+    btnRevelaSenhaLogin.style.display = 'inline';
+  }, 2000);
 
   if (revelarSenhaCadastro.type === 'password') revelarSenhaCadastro.type = 'text';
   btnRevelaSenhaCadastro.style.display = 'none';
 
-  setTimeout(() => revelarSenhaCadastro.type = 'password', btnRevelaSenhaCadastro.style.display = 'inline', 1500);
+  setTimeout(() => {
+    revelarSenhaCadastro.type = 'password';
+    btnRevelaSenhaCadastro.style.display = 'inline';
+  }, 2000);
 }
 
-// Essa função é responsável por validar o CPF, login e cadastro
+// Essa função é responsável por validar o CPF do login e cadastro
 function validarCPF(inputCPF) {
   if (!/^\d/.test(inputCPF)) {
     return 'O CPF deve começar com um número.';
@@ -66,12 +72,6 @@ function validarCPF(inputCPF) {
   return true; // Se o CPF estiver dentro dos parametros definidos, será retornado um valor TRUE
 }
 
-// Essa função é responsável por exibir os alertas de erro das validações do CPF
-function exibirAlerta(elemento, mensagem) {
-  elemento.innerHTML = mensagem;
-  setTimeout(() => elemento.innerHTML = '', 2500);
-}
-
 // Essa função é responsável por formatar o CPF 
 function formatarCPF(moldeCPF) {
   moldeCPF.addEventListener('keypress', () => {
@@ -80,6 +80,12 @@ function formatarCPF(moldeCPF) {
     if (config === 3 || config === 7) moldeCPF.value += '.';
     if (config === 11) moldeCPF.value += '-';
   });
+}
+
+// Essa função é responsável por exibir os alertas de erro das validações do CPF
+function exibirAlerta(elemento, mensagem) {
+  elemento.innerHTML = mensagem;
+  setTimeout(() => elemento.innerHTML = '', 2500);
 }
 
 // Aqui refere-se ao botão voltar, presente na tela de cadastro, ao clicar nele, você retorna à página de login
