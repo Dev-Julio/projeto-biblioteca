@@ -122,7 +122,7 @@ presetFormatCPFcadastro.addEventListener('keypress', () => {
 });
 
 // Aqui finaliza o cadastro dos usuários, manda os valores pro banco de dados
-adicionar.addEventListener('click', () => {
+finalizarCadastroUsuario.addEventListener('click', () => {
   if (barrarInputsVazioCadastro()) {
     const alertaInputsVazioCadastro = document.getElementById('alerta-campos-incompletos-cadastro');
     const resultadoValidacaoCadastro = validarCPF(document.getElementById('CPF-cadastro').value);
